@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+        <h2>Appointments</h2>
+        <ul>
+            {% for a in appointments %}
+            <li>{{ a.patient }} with {{ a.doctor }}</li>
+            {% endfor %}
+        </ul>
+    {% endblock %}
+
+</body>
+</html>
